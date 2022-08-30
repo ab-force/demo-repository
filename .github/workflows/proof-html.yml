@@ -8,7 +8,10 @@ on:
         type: choice
         required: true
         default: AWS
-        options: .github/clouds.yml
+        options: 
+          - AWS
+          - GCP
+          - AZURE
 jobs:
   build:
     runs-on: ubuntu-latest
