@@ -2,6 +2,13 @@ name: Proof HTML
 on:
   push:
   workflow_dispatch:
+    inputs:
+      cloud-name:
+        description: Cloud name
+        type: choice
+        required: true
+        default: AWS
+        options: .github/clouds.yml
 jobs:
   build:
     runs-on: ubuntu-latest
